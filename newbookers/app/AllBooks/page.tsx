@@ -1,10 +1,13 @@
 import Image from "next/image";
 import React from "react";
-import styles from "./BookAll.module.css";
+import styles from "./AllBooks.module.css";
 import Tag from "./Tag/TagProgramming";
 import TagFramework from "./Tag/TagFramework";
+import { getAllBooks } from "@/src/bookAPI";
 
-const BooksAll = () => {
+export default async function AllBook() {
+  const bookall = await getAllBooks();
+
   return (
     <>
       <div className="pt-10">
@@ -81,6 +84,4 @@ const BooksAll = () => {
       <TagFramework />
     </>
   );
-};
-
-export default BooksAll;
+}

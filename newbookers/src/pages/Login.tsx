@@ -1,9 +1,12 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { NextPage } from "next";
+import { getServerSession } from "next-auth";
+import authOptions from "./api/auth/[...nextauth]";
 
-const Login: NextPage = () => {
-  const { data: session } = useSession();
+const Login: NextPage = async () => {
+  const session = await getServerSession(authOptions);
+  console.log(session);
 
   return (
     <>

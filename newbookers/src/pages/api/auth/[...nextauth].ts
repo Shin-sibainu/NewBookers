@@ -5,6 +5,9 @@ import GoogleProvider from "next-auth/providers/google";
 type ClientType = {
   clientId: string;
   clientSecret: string;
+  user: {
+    email: string;
+  };
 };
 
 const authOptions: NextAuthOptions = {
