@@ -3,8 +3,6 @@ import Image from "next/image";
 import React, { useState, useEffect } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/splide/css";
-import Tag from "./AllBooks/Tag/TagProgramming";
-import TagFramework from "./AllBooks/Tag/TagFramework";
 import BookRecommendation from "./components/BookHome/BookRecommendation";
 import Link from "next/link";
 import Book from "./components/BookHome/BookHome";
@@ -84,11 +82,9 @@ export default function Home() {
       </main>
       <Book />
       <BookRecommendation />
-      <Tag />
-      <TagFramework />
       <div className="flex justify-center items-center pb-10">
         <div className="flex mt-[3rem] bg-[#5A5A5A] rounded-full w-[40rem] py-[0.8rem] text-white text-center items-center justify-center cursor-pointer hover:bg-[#3A3A3A]">
-          <Link href="BooksAll" className="relative flex">
+          <Link href="/AllBooks" className="relative flex">
             全ての技術書を見る
           </Link>
         </div>

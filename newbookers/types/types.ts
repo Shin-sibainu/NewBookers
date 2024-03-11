@@ -30,3 +30,8 @@ export type BookType = {
   reviewAverage: number;
   booksGenreId: string;
 };
+
+export type ApiResponse = {
+  status: string;
+  data: { params: BookType }[];
+};

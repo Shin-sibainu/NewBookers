@@ -11,7 +11,7 @@ import { AiFillGoogleCircle } from "react-icons/ai";
 
 const Tag = () => {
   return (
-    <div className="flex flex-col absolute right-[4rem] w-[13rem] h-[19rem] bg-transparent border-2 border-gray-300 rounded py-[1.2rem] px-[0.8rem] text-center transform -translate-y-[66rem]">
+    <div className="flex flex-col top-0 left-0 w-[13rem] h-[20rem] bg-transparent border-2 border-gray-300 rounded py-[1.2rem] px-[0.8rem] text-center">
       <h2 className="text-white">プログラミング言語</h2>
 
       {/* JavaScriptのボタン */}

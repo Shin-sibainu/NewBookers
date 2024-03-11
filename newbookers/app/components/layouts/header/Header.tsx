@@ -1,38 +1,42 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import "../.././BookHome/BookHome.module.css";
 import { IoIosSearch } from "react-icons/io";
 function Header() {
   return (
-    <div className="flex flex-col pt-4 border-b border-white pb-2.5">
-      <div className="flex justify-between mx-auto container items-center text-white">
-        <Link href="/" className="text-xl">
-          新Bookers
-        </Link>
-        <div className="">
-          <ul className="flex">
-            <Link href="categories">
-              <IoIosSearch className="w-6 h-12 cursor-pointer hover:text-gray-500" />
-            </Link>
-            <Link
-              href="/login"
-              className="ml-4 pt-3.5 cursor-pointer hover:text-gray-700"
-            >
-              ログイン
-            </Link>
-            <Link href="/profile">
-              <Image
-                width={50}
-                height={50}
-                src={"/images/default_icon.svg"}
-                alt="profile"
-                className="flex flex-col ml-2.5 rounded-full cursor-pointer"
-              />
-            </Link>
+    <>
+      <div className="fixed w-full z-10 bg-[#2E2E2E] py-4">
+        <div className="flex justify-between items-center text-white mx-auto max-w-screen-lg">
+          <Link href="/" className="text-xl ml-[-6rem]">
+            新Bookers
+          </Link>
+          <ul className="">
+            <div className="flex mr-[-5rem]">
+              <Link href="categories">
+                <IoIosSearch className="w-6 h-12 cursor-pointer hover:text-gray-500" />
+              </Link>
+              <Link
+                href="/login"
+                className="ml-4 pt-3.5 cursor-pointer hover:text-gray-700"
+              >
+                ログイン
+              </Link>
+              <Link href="/profile">
+                <Image
+                  width={50}
+                  height={50}
+                  src={"/images/default_icon.svg"}
+                  alt="profile"
+                  className="flex flex-col ml-2.5 rounded-full cursor-pointer"
+                />
+              </Link>
+            </div>
           </ul>
         </div>
       </div>
-      <div>
+
+      <div className="pt-[4.7rem] pb-[0.74rem] border-b border-white bg-[#2E2E2E]">
         <ul className="flex justify-center gap-[1.6rem] pt-3.5 text-white">
           <Link href="/" className="cursor-pointer hover:text-gray-500">
             ホーム
@@ -78,7 +82,7 @@ function Header() {
           </Link>
         </ul>
       </div>
-    </div>
+    </>
   );
 }
 

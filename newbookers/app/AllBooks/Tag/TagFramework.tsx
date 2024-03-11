@@ -12,8 +12,8 @@ import { SiLaravel } from "react-icons/si";
 const TagFramework = () => {
   return (
     <>
-      <div className="flex justify-between">
-        <div className="flex flex-col absolute right-[4rem] w-[13rem] h-[20rem] bg-transparent border-2 border-gray-300 rounded py-[1.2rem] px-[0.8rem] text-center transform -translate-y-[45rem]">
+      <div className="flex">
+        <div className="flex flex-col top-0 left-0 w-[13rem] h-[20rem] bg-transparent border-2 border-gray-300 rounded py-[1.2rem] px-[0.8rem] text-center">
           <h2 className="text-white">
             フレームワーク
             <br />
