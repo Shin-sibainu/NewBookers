@@ -1,27 +1,31 @@
 import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { NextPage } from "next";
-import { getServerSession } from "next-auth";
+import { Session, getServerSession } from "next-auth";
 import authOptions from "./api/auth/[...nextauth]";
+import AuthServerButton from "../components/auth/AuthClientButton";
+import AuthClientButton from "../components/auth/AuthClientButton";
 
 const Login: NextPage = async () => {
-  const session = await getServerSession(authOptions);
+  // const { data: session } = useSession(authOptions);
+  const session: Session | null = await getServerSession();
   console.log(session);
 
   return (
     <>
-      {session && (
+      {/* {session && (
         <div>
           <h1>ようこそ, {session.user && session.user.email}</h1>
-          <button onClick={() => signOut()}>ログアウト</button>
+          <button>ログアウト</button>
         </div>
       )}
       {!session && (
         <div>
           <p>ログインしていません</p>
-          <button onClick={() => signIn()}>ログイン</button>
+          <button>ログイン</button>
         </div>
-      )}
+      )} */}
+      <AuthClientButton session={session} />
     </>
   );
 };
