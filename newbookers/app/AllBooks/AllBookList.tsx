@@ -20,7 +20,7 @@ const BookList = ({ allbooks }: BookListProps) => {
             <Link href={`AllBooks/${book.params.booksGenreId}`}>
               <div className="flex items-start ml-[13.5rem]">
                 <Image
-                  src={book.params.largeImageUrl.url}
+                  src={book.params.largeImageUrl.url as string}
                   alt={book.params.title}
                   width={150}
                   height={50}

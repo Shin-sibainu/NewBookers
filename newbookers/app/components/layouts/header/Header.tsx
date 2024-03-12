@@ -3,6 +3,8 @@ import Link from "next/link";
 import React from "react";
 import "../.././BookHome/BookHome.module.css";
 import { IoIosSearch } from "react-icons/io";
+import HeaderClient from "./Header.client";
+
 function Header() {
   return (
     <>
@@ -16,21 +18,10 @@ function Header() {
               <Link href="categories">
                 <IoIosSearch className="w-6 h-12 cursor-pointer hover:text-gray-500" />
               </Link>
-              <Link
-                href="/login"
-                className="ml-4 pt-3.5 cursor-pointer hover:text-gray-700"
-              >
-                ログイン
-              </Link>
-              <Link href="/profile">
-                <Image
-                  width={50}
-                  height={50}
-                  src={"/images/default_icon.svg"}
-                  alt="profile"
-                  className="flex flex-col ml-2.5 rounded-full cursor-pointer"
-                />
-              </Link>
+
+              <div className="flex items-center">
+                <HeaderClient />
+              </div>
             </div>
           </ul>
         </div>

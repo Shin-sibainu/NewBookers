@@ -5,18 +5,25 @@ import { signIn, signOut } from "next-auth/react";
 import React from "react";
 
 const AuthClientButton = ({ session }: { session: Session | null }) => {
-  console.log(session);
   return (
     <>
       {session ? (
-        <div>
-          <h1>ようこそ, {session.user && session.user.email}</h1>
-          <button onClick={() => signOut()}>ログアウト</button>
+        <div className="flex flex-col text-white">
+          <div className="flex justify-center my-[3rem] text-xl">
+            ようこそ {session.user && session.user.name}さん！
+          </div>
+          <div className="flex justify-center">
+            <button className="pb-10" onClick={() => signOut()}>
+              ログアウト
+            </button>
+          </div>
         </div>
       ) : (
-        <div>
-          <p>ログインしていません</p>
-          <button onClick={() => signIn()}>ログイン</button>
+        <div className="flex flex-col text-white text-xl">
+          <p className="flex justify-center my-[3rem]">ログインしていません</p>
+          <button className="pb-10" onClick={() => signIn()}>
+            ログイン
+          </button>
         </div>
       )}
     </>
